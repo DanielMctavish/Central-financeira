@@ -1,0 +1,105 @@
+<link rel="stylesheet" href="/public/styles/styleDashboardShop.css">
+<link rel="stylesheet" href="/public/styles/styleGeral.css">
+
+<style>
+    #nav-menu-home {
+        position: absolute;
+        list-style: none;
+        color: rgba(127, 127, 127, 0.822);
+        font-family: sans-serif;
+        display: flex;
+        justify-content: space-around;
+        top: 3vh;
+        right: 20vh;
+        width: 20%;
+        font-size: 14pt;
+    }
+
+    #nav-menu-home li {
+        cursor: pointer;
+    }
+
+    #user-dashboard-display {
+        position: fixed;
+        width: 25vh;
+        height: 4vh;
+        top: 2vh;
+        left: 4vh;
+        background: rgb(46, 0, 0);
+        color: white;
+        border-radius: 10px;
+        font-family: sans-serif;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 580px) {
+        #nav-menu-home {
+            width: 25%;
+            font-size: 10pt;
+            left: 15vh;
+        }
+        #user-dashboard-display{
+            color: rgb(208, 255, 208);
+            top: 6vh;
+        }
+        #shop-name{
+            height: 8vh;
+        }
+    }
+</style>
+
+
+
+<div id="dashboard-shop">
+    {{#if msglogin}}
+    <div class="msg-error" id="faixa-sup">pra poder comprar é necessário fazer login</div>
+    {{/if}}
+
+    <div id="nav-center-dashboard">
+        {{#if saldoLow}}
+            <div id="user-dashboard-display">saldo insuficiente</div>
+        {{/if}}
+
+        {{#if loginVerify}}
+            <div id="user-dashboard-display">
+                {{user}} - {{userSaldo}}
+            </div>
+        {{/if}}
+        
+        {{#each produtos}}
+        <div id="card-product-dashboard">
+            <div id="shop-name">
+                vendido por: <br>
+                {{donoName}}
+            </div>
+            <img src="/public/images/resize+{{image.data}}" id="img-produtos">
+            <li id="title">{{name}}</li>
+            <li id="quantify">Disponíveis:{{quantidade}}</li>
+            <li id="valor">R$ {{valor}}</li>
+            <form action="/shops/buy/{{_id}}" method="get" id="form-btn-buy">
+                <button id="btn-dash-buy">comprar</button>
+            </form>
+
+        </div>
+        {{/each}}
+    </div>
+
+    <div id="nav-menu-home">
+        <li><a href="/cadastro">cadastrar</a></li>
+        <li>sobre</li>
+    </div>
+
+    <a href="/"><input type="button" value="HOME" id="all-btn"></a>
+
+
+</div>
+
+<script src="/public/scripts/lojaScripts.js"></script>

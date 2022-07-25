@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/public/styles/styleGeral.css">
+
+
+{{#if createusererror}}
+<div id="display-error">
+    <h2>Desculpe! houve algum erro ao tentar criar seu usuário! tente novamente mais tarde</h2>
+    <a href="/"><input type="button" value="HOME" id="all-btn"></a>
+</div>
+{{/if}}
+
+
+{{#if createSuccess}}
+    <div id="display-success">
+        <h2>usuário {{username}} criado com sucesso!</h2> 
+        <h3> <a href="/login">Faça seu primeiro login!</a></h3>
+        <a href="/"><input type="button" value="HOME" id="all-btn"></a>
+    </div>
+{{/if}}

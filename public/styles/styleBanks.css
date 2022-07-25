@@ -1,0 +1,193 @@
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+#banks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(209.35deg, #E9E9E9 18%, rgba(134, 134, 134, 0.6) 92.24%);
+    mix-blend-mode: normal;
+}
+
+
+#bancos-list {
+    list-style: none;
+    width: 100%;
+}
+
+#bancos-list li {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    color: white;
+    width: 80%;
+    height: 18vh;
+
+    margin: 5vh;
+    border-radius: 4px;
+}
+
+#btn-maximus {
+    background: linear-gradient(180deg, #09786B 0%, #073832 82.01%);
+}
+
+#btn-maximus:hover {
+    background: linear-gradient(180deg, #15ab99 0%, #147066 82.01%);
+}
+
+
+#btn-geeksme {
+    background: linear-gradient(90deg, #C46CB0 2.35%, #B03395 59.77%);
+}
+
+#btn-imperius {
+    background: linear-gradient(268.91deg, #1E2160 0.7%, #3E429A 97.79%);
+}
+
+#btn-back {
+    position: absolute;
+    top: 4vh;
+    right: 2vh;
+    width: 12vh;
+    height: 5vh;
+
+    background: #00B59F;
+    color: white;
+    font-size: 14pt;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.38);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#btn-back:hover {
+    background: #028879;
+}
+
+#maximus-display {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+
+    background: linear-gradient(209.35deg, #06322D 31.87%, #208B7F 92.24%);
+    mix-blend-mode: normal;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#maximus-display form {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 6vh;
+    height: 12vh;
+    justify-content: space-around;
+}
+
+#title {
+    position: absolute;
+    top: 4vh;
+    color: white;
+    font-family: sans-serif;
+    font-size: 25pt;
+}
+
+#display-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 216px;
+
+    background: rgba(61, 61, 61, 0.567);
+    border-radius: 15px;
+    color: #00D62F;
+    font-size: 18pt;
+    font-family: sans-serif;
+}
+
+#info01 {
+    display: flex;
+    letter-spacing: 4px;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70%;
+}
+
+#mini-saldo {
+    background: rgb(43, 43, 43);
+    padding: 4px;
+    color: white;
+    border-radius: 4px;
+}
+
+#content-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 15vh;
+    color: white;
+    font-size: 20pt;
+    text-align: center;
+}
+
+#msgStatus {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 0, 0, 0.663);
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+}
+
+#takeEmprest {
+    cursor: pointer;
+    background: #00B59F;
+    color: white;
+    border: none;
+    height: 4vh;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.394);
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 580px) {
+    #title {
+        position: absolute;
+        font-size: 14pt;
+        top: 10vh;
+    }
+
+    #content-text {
+        width: 80%;
+        font-size: 12pt;
+    }
+
+    #btn-back {
+        top: 1vh;
+    }
+
+    #display-info {
+        padding: 2vh;
+        font-size: 8pt;
+    }
+}

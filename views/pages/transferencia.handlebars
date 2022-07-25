@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/public/styles/styletransfer.css">
+
+<div id="display-transfer">
+    <a href="/cliente"><input type="button" id="btn-home" value="voltar"></a>
+    <div id="nav-sup">
+        <h2>Transferir para outra conta</h2>
+        digite o email da outra conta
+        <form action="/transferencia/search" method="POST">
+            <input type="text" id="input-email" name="userEmailSearch" placeholder="email@exemplo.com">
+            <button id="btn-search">Pesquisar</button>
+        </form>
+            <a href="/transferencia/searchAll"><input type="button" value="Listar usuários" id="btn-search"></a>
+    </div>
+    <div id="nav-center">
+        {{#if emailNull}}
+        <h2>Por favor digite um email válido</h2>
+        {{/if}}
+        {{#if emailOff}}
+        <h2>usuário não encontrado</h2>
+        {{/if}}
+        {{#if emailEqual}}
+        <h2>você não pode transferir para você mesmo... ¬¬"</h2>
+        {{/if}}
+        {{#if authSearch}}
+        <div id="content-center">
+            <div id="part-01">
+                <h1>{{nomefind}}</h1>
+                <div>{{cpfFind}}</div>
+            </div>
+            <form action="/transferencia/set" method="POST" id="form-transfer-center">
+                <div>R$ <input type="number" id="input-transfer" name="transferValue"></div>
+                <button id="btn-transfer">CONFIRMAR</button>
+            </form>
+        </div>
+        {{/if}}
+        {{#if listAuth}}
+            {{#each userList}}
+            <div id="card-user-list-transfer">
+                <div id="name-list-transfer">{{name}}</div>
+                <div id="email-list-transfer">{{email}}</div>   
+            </div>
+            {{/each}}
+        {{/if}}
+    </div>
+
+</div>

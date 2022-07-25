@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/public/styles/styleShop.css">
+
+<div id="shop-create">
+
+
+    <div id="nav-sup-shop">
+        <div id="title-shop">LOJA: {{yourshopname}}</div>
+
+        <ul id="menu-shop-list">
+            <li><a href="/shops/dahsboardprodutos"><input type="button" value="Add Produto" id="btn-add-product"></a></li>
+            <li><a href="/shops/dashboard"><input type="button" value="LOJAS" id="btn-add-back"></a></li>
+            <li><a href="/cliente"><input type="button" value="VOLTAR" id="btn-back-shop"></a></li>
+        </ul>
+
+        {{#if msgSuccess}}
+        <div>produto cadastrado com sucesso</div>
+        {{/if}}
+
+
+    </div>
+
+    <div id="content-pessoalshop">
+        {{#each yourProducts}}
+        <div id="card-pessoal-shop">
+            <img src="./public/images/resize+{{image.data}}" id="photo-card-pessoal">
+
+            <div id="descri-box-shop">
+                <h2>
+                    <li>{{name}}</li>
+                </h2>
+                <li>Disponíveis: {{quantidade}}</li>
+            </div>
+
+            <li id="price-pessoalcard">R$ {{valor}}</li>
+            <div id="card-box-product-btns">
+                <input type="button" value="EDITAR" class="btn-edit-product">
+                <a href="/shops/deleteproduct/{{_id}}"><input type="button" value="EXCLUIR"
+                        class="btn-edit-del-product"></a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+</div>

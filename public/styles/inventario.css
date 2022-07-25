@@ -1,0 +1,159 @@
+#inventarioDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: linear-gradient(95.26deg, #292929 26.5%, rgba(71, 71, 71, 0.88) 97.51%);
+    mix-blend-mode: normal;
+    color: white;
+
+    overflow-y: auto;
+}
+
+
+#slotsMolds,
+#itemsMolds {
+    width: 90%;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#itemsMolds {
+    position: absolute;
+    align-items: flex-start;
+    height: auto;
+    top: 10vh;
+}
+
+#itemsMolds li {
+    cursor: pointer;
+    overflow: hidden;
+    list-style: none;
+    width: 15vh;
+    height: 15vh;
+    background: none;
+    margin: 3vh;
+    border: 1px solid #00dc30;
+    border-radius: 10px;
+}
+
+#itemsMolds li img {
+    width: 15vh;
+    height: 15vh;
+}
+
+
+#slotsMolds li {
+    list-style: none;
+    width: 15vh;
+    height: 15vh;
+    background: none;
+    margin: 3vh;
+    border: 1px solid #00d62e29;
+    border-radius: 10px;
+}
+
+#nav-bar-inventario {
+    position: fixed;
+    top: 2vh;
+    width: 90%;
+    height: 6vh;
+    background: rgb(165, 165, 165);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#name-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 6vh;
+    background: white;
+    color: black;
+    text-align: center;
+    font-size: 17pt;
+    font-family: sans-serif;
+}
+
+#btn-back {
+    cursor: pointer;
+    position: fixed;
+    right: 12vh;
+    top: 3.3vh;
+    width: 15vh;
+    height: 4vh;
+    background: #00B59F;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15pt;
+    box-shadow: 2px 2px 5px rgba(67, 67, 67, 0.51);
+    z-index: 1;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 580px) {
+    #btn-back {
+        right: 4vh;
+    }
+
+    #name-nav {
+        width: 40%;
+        font-size: 12pt;
+    }
+
+    #slotsMolds,
+    #itemsMolds {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #itemsMolds {
+        position: absolute;
+        align-items: flex-start;
+        height: auto;
+        top: 10vh;
+    }
+
+    #itemsMolds li {
+        cursor: pointer;
+        overflow: hidden;
+        list-style: none;
+        width: 45vh;
+        height: 45vh;
+        background: none;
+        margin: 1vh;
+        border: 1px solid #00dc30;
+        border-radius: 10px;
+    }
+
+    #itemsMolds li img {
+        width: 45vh;
+        height: 45vh;
+    }
+
+
+    #slotsMolds li {
+        list-style: none;
+        width: 45vh;
+        height: 45vh;
+        background: none;
+        margin: 1vh;
+        border: 1px solid #00d62e29;
+        border-radius: 10px;
+    }
+}

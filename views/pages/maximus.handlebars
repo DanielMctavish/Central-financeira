@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/public/styles/styleBanks.css">
+
+<div id="maximus-display">
+    {{#if msgInvalid}}
+        <div id="msgStatus">valor de empréstimo inválido</div>
+    {{/if}}
+    {{#if msgInvalid2}}
+        <div id="msgStatus">o valor do empréstimo é maior do que seu crédito</div>
+    {{/if}}
+    <a href="/banks"><input type="button" value="voltar" id="btn-back"></a>
+    <div id="title">BANCO MAXIMUS - LTDA</div>
+    <div id="display-info">
+        <div id="info01">
+            <li> Nome: {{nome}} <span id="mini-saldo">R${{saldo}}</span> </li>
+            <li> CPF: {{cpf}} </li>
+            <li> Crédito---------------------------------------------------------R$  {{credito}}</li>
+        </div>
+    </div>
+    <div id="content-text">
+        você assumirá uma dívida com pagamento
+        em parcela única de 15% do empréstimo total,
+        você só poderá pedir um empréstimo novamento
+        caso pague a dívida vigente.
+    </div>
+    <form action="/banks/maximusbank/emprestimo" method="POST">
+        <input type="number" name="emprestValue" placeholder="digite o valor">
+        <button id="takeEmprest">Pegar empréstimo</button>
+    </form>
+</div>

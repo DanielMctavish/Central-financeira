@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/public/styles/styleGeral.css">
+<style>
+    #msg-alert{
+        position: fixed;
+        top: 0;
+        font-family: sans-serif;
+        width: 100%;
+        background: orange;
+        text-align: center;
+        color: white;
+    }
+</style>
+<div id="login">
+    {{#if userEmpty}}<div id="msg-alert">usuário não encontrado</div>{{/if}}
+    {{#if userErr}}<div id="msg-alert">usuário ou senha incorreta</div>{{/if}}
+    <div id="nav-center">
+        <div id="faixa-login"></div>
+        <h2>ENTRE</h2>
+        <form action="/login/authenticate" method="POST" id="form-login">
+            <div>email:</div>
+            <input type="text" class="inputs" name="email" required>
+            Senha:
+            <input type="password" class="inputs" name="passwordLogin" required>
+            <button class="btn-confirm">ENTRAR</button>
+        </form>
+        <!--<input type="button" value="Logar com Google" class="btn-google">-->
+        <div>
+            não tem conta?<br>
+            <a href="/cadastro">cadastre-se</a>
+        </div>
+    </div>
+    <a href="/"><input type="button" value="VOLTAR" id="all-btn"></a>
+</div>

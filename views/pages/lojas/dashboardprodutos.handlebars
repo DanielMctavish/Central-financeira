@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/public/styles/styleShop.css">
+<link rel="stylesheet" href="/public/styles/styleGeral.css">
+
+
+
+<div id="produto-create">
+    <div id="nav-center">
+        <h2>Cadastre seu produto</h2>
+        <form action="/shops/cadprodutos" id="form-cad-pro" method="post" enctype="multipart/form-data">
+            <input type="text" placeholder="nome do produto" name="name" class="input-product" required>
+            <input type="number" placeholder="quantidade" name="quantidade" class="input-product" required>
+            <input type="number" placeholder="valor" name="valor" class="input-product" required>
+            <input type="file" name="photoUpload" id="photo-produto-upload"  accept="image/*">
+            <button id="btn-criar-produto">CRIAR</button>
+        </form>
+    </div>
+    <a href="/cliente"><input type="button" value="VOLTAR" id="all-btn"></a>
+    {{#if msgFileNull}}
+        <div id="msg-empty-file"><h3>você precisa selecionar uma imagem!</h3></div>
+    {{/if}}
+    {{#if msgNaN}}
+        <div id="msg-empty-file"><h3>valores de quantidade e preço precisam ser números</h3></div>
+    {{/if}}
+    {{#if quantAlert}}
+        <div id="msg-empty-file"><h3>você só pode adicionar até 10 unidades de cada produto criado</h3></div>
+    {{/if}}
+</div>

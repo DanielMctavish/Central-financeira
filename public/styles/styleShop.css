@@ -1,0 +1,332 @@
+#shop-create,
+#produto-create {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: rgb(58, 148, 129);
+    background: linear-gradient(180deg, #373737 0%, #5BA0BE 100%);
+    mix-blend-mode: normal;
+}
+
+#nav-center {
+    position: absolute;
+    width: 85%;
+    height: 55vh;
+
+    background: linear-gradient(180deg, #EAEAEA 0%, rgba(206, 223, 223, 0.791875) 48.96%, rgba(215, 215, 215, 0.46) 100%);
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: system-ui, -apple-system,
+        BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+        'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(76, 76, 76);
+}
+
+#faixa-sup {
+    position: absolute;
+    width: 110%;
+    height: 1.5vh;
+    background: rgb(29, 29, 29);
+    filter: blur(1.5px);
+    top: 0;
+    transition: 2.5s;
+}
+
+#btn-next {
+    width: 15vh;
+    height: 4vh;
+    background: #00B59F;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(72, 72, 72, 0.165);
+    font-size: 12pt;
+}
+
+#shop-name {
+    /* input-pesquisar */
+
+    width: 20vh;
+    height: 4vh;
+
+    background: #FFFFFF;
+    box-shadow: inset -2px 4px 4px rgba(0, 0, 0, 0.38);
+    border-radius: 10px;
+    border: none;
+}
+
+#shop-descri {
+    width: 35%;
+    height: 25vh;
+    padding: 2vh;
+
+    background: #FFFFFF;
+    box-shadow: inset -2px 4px 4px rgba(0, 0, 0, 0.38);
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+}
+
+#form-shop-create,
+#form-cad-pro {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 70vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#msg-empty-file{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    background: rgba(255, 0, 0, 0.547);
+    width: 100%;
+    height: 3vh;
+    color: white;
+    font-family: sans-serif;
+}
+
+.input-product{
+    width: 15vh;
+    height: 3vh;
+    border-radius: 5px;
+    border: none;
+}
+
+#btn-criar-produto{
+    width: 12vh;
+    height: 4vh;
+    background: #00B59F;
+
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.274);
+    font-weight: bold;
+}
+
+#nav-sup-shop {
+    /* Rectangle 8 */
+
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    left: 0px;
+    top: 0px;
+
+    background: #EDEDED;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.453);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+#btn-add-product,
+#btn-add-back,
+#btn-back-shop {
+    width: 15vh;
+    height: 4vh;
+    background: #00B59F;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(72, 72, 72, 0.165);
+    font-size: 12pt;
+}
+
+#btn-add-product:hover,
+#btn-add-back:hover,
+#btn-back-shop:hover {
+    background: #009180;
+}
+
+#card-pessoal-shop {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 20vh;
+    background: #00B59F;
+    border-radius: 15px;
+    list-style: none;
+    font-family: sans-serif;
+    color: white;
+    margin-top: 4vh;
+}
+
+#content-pessoalshop {
+    align-items: center;
+    position: absolute;
+    top: 12vh;
+    width: 95%;
+    height: 80vh;
+    overflow-y: auto;
+}
+
+#photo-card-pessoal {
+    width: 10%;
+    border-radius: 10px;
+}
+
+#photo-produto-upload {
+    cursor: pointer;
+
+    width: 16vh;
+    height: 16vh;
+    background-color: white;
+    border-radius: 10px;
+    background-image: url("/public/medias/simbolo-de-interface-de-camera-fotografica-para-botao\ 1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#descri-box-shop {
+    display: flex;
+    flex-direction: column;
+    font-size: 16pt;
+}
+
+#card-box-product-btns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+    margin-bottom: -10vh;
+}
+
+#price-pessoalcard {
+    position: absolute;
+    right: 40vh;
+    margin-top: -12vh;
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+.btn-edit-product {
+    cursor: pointer;
+    width: 12vh;
+    height: 4vh;
+
+    background: #E8E8E8;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.38);
+    border-radius: 10px;
+
+    border: none;
+}
+
+.btn-edit-del-product{
+    cursor: pointer;
+    width: 12vh;
+    height: 4vh;
+
+    background: #ae1919;
+    color: white;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.38);
+    border-radius: 10px;
+
+    border: none;
+}
+
+#menu-shop-list{
+    list-style: none;
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+#menu-icon-mobile{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    position: absolute;
+    width: 5vh;
+    height: 5vh;
+    
+    right: 2vh;
+    z-index: 1;
+    border: 2px solid rgb(157, 157, 157);
+
+    opacity: 0;
+}
+
+#menu-icon-mobile div{
+    width: 4vh;
+    height: 5px;
+    background: rgb(100, 100, 100);
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 580px) {
+    #menu-shop-list{
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 8vh;
+    
+        width: 12vh;
+        height: 30vh;
+        z-index: 1;
+    } 
+    #menu-shop-list li{
+       margin-top: 2vh;
+       margin-left: -6vh;
+    } 
+    #menu-icon-mobile{
+        opacity: 1;
+        transition: 300ms;
+    }
+    #descri-box-shop{
+        font-size: 8pt;
+    }
+    #price-pessoalcard{
+        font-size: 10pt;
+        right: 20vh;
+    }
+    #photo-card-pessoal{
+        width: 40%;
+    }
+    #card-pessoal-shop{
+        width: 70%;
+    }
+    #card-box-product-btns{
+        transform: scale(.8);
+        position: absolute;
+        width: 65%;
+        margin-bottom: -14vh;
+    }
+    #title-shop{
+        position: fixed;
+        left: 2vh;
+    }
+    #shop-descri{
+        width: 80%;
+    }
+}
+

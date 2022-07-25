@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/public/styles/inventario.css">
+
+<div id="inventarioDisplay">
+    <div id="nav-bar-inventario">
+        <div id="name-nav">
+            {{userAtual}}
+        </div>
+    </div>
+
+    <a href="/"><input type="button" value="voltar" id="btn-back"></a>
+
+    <div id="slotsMolds">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </div>
+    <div id="itemsMolds">
+        {{#each itensUser}}
+            <li><img src="/public/images/resize+{{urlItem}}"></li>
+        {{/each}}
+    </div>
+</div>

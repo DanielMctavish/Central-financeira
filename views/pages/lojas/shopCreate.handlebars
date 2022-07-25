@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/public/styles/styleShop.css">
+<link rel="stylesheet" href="/public/styles/styleGeral.css">
+
+
+<div id="shop-create">
+    <div id="nav-center">
+        <div id="faixa-sup"></div>
+        <form action="/shops/set" method="POST" id="form-shop-create">
+            <h2>Diga o nome da sua loja</h2>
+            <input type="text" id="shop-name" name="nameshop">
+            <h3>escreva um descrição para sua loja</h3>
+            <textarea id="shop-descri" cols="30" rows="10" name="descricao"></textarea>
+            <button id="btn-next">Prosseguir</button>
+        </form>
+    </div>
+    <a href="/cliente"><input type="button" value="VOLTAR" id="all-btn"></a>
+</div>
+
+
+<script src="/public/scripts/lojaScripts.js"></script>

@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="/public/styles/styleGeral.css">
+
+
+<div id="cliente">
+    <div id="nav-superior">
+        <div id="area01">
+            <h1>ÁREA DO CLIENTE</h1>
+            <a href="/login/logoff"><input type="button" value="deslogar" id="btn-deslog"></a>
+        </div>
+        <div id="area02">
+            <div id="clientInfo">
+                <div>Nome: {{name}}</div>
+                <div>CPF: {{CPF}} </div>
+                <div>Email: {{email}}</div>
+            </div>
+            <div id="displaySaldo">
+                <div>
+                    Saldo em conta
+                </div>
+                <div>
+                    R${{saldo}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="nav-center02">
+        <h2>SEU HISTÓRICO</h2>
+        
+        <div id="board-history">
+            <p> Histórico de transações</p>
+            {{#if authDivida}}
+            <li>Dívida do: {{dividaBank}}
+                <form action="/banks/maximusbank/payemprest" method="POST" id="form-pay-emprest">
+                    <input type="number" placeholder="valor" id="input-payemprest" name="payValue">
+                    <button id="btn-payemprest">pagar</button>
+                    <a href="/banks/maximusbank/quitemprest"><input type="button" value="quitar" id="btn-payemprest"></a>
+                    <span id="span-divid">R$ {{dividaValue}}</span>
+                    {{msgStatus}}
+                </form>
+                
+            </li>
+            {{else}}
+            <li>você não possue dívidas</li>
+            {{/if}}
+            <hr>
+            {{#if lojapresence}}
+            <li>Produtos dentro da sua loja <span>{{produtosCount}}</span></li>
+            {{else}}
+            <li>você não tem loja cadastrada</li>
+            {{/if}}
+            <hr>
+            <li>Ítens no inventário <span>{{inventarioCount}}</span></li>
+            <hr>
+        </div>
+        <div id="nav-btns">
+            <a href="/transferencia"><input type="button" value="transferir"></a>
+            <a href="/banks"><input type="button" value="bancos"></a>
+            <a href="/shops"><input type="button" value="loja"></a>
+            <a href="/inventario"><input type="button" value="inventário"></a>
+        </div>
+       <a href="/deleteuser"><input type="button" value="excluir conta" id="deleteAccount"></a> 
+    </div>
+
+    {{#if deleteMsg}}
+        <div id="screen-blur"></div>
+        <div id="screenDelete">
+            <h2>Ao deletar sua conta...</h2>
+            <div id="contentDel">
+                você perderá todas as suas finanças, seus produtos da loja serão excluídos e os ítens no 
+                inventário serão excluídos. você deseja proseguir?
+            </div>
+            <form action="/deleteuser/send" id="btns-deleseUser" method="POST">
+                <button name="confirmBtn" value="prosseguir">Prosseguir</button>
+                <button name="confirmBtn" value="cancelar">Cancelar</button>
+            </form>
+        </div>
+    {{/if}}
+
+</div>
